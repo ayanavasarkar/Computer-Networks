@@ -8,7 +8,8 @@ class ClientThread implements Runnable
         connectionSocket=client;
     }
     public void run()
-    {   try{
+    {   
+        try{
          String dataFromClient,upperCaseData;
          BufferedReader inFromClient=new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
          DataOutputStream outToClient=new DataOutputStream(connectionSocket.getOutputStream());
